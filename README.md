@@ -16,6 +16,9 @@ These capabilities include generating applications, libraries, etc as well as th
 
 Below are our core plugins:
 
+
+- [.NET](https://github.com/nx-dotnet/nx-dotnet)
+  - Documentation: https://github.com/nx-dotnet/nx-dotnet 
 - [React](https://reactjs.org)
   - `npm install --save-dev @nrwl/react`
 - Web (no framework frontends)
