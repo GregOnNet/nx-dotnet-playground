@@ -1,6 +1,67 @@
 {
   "version": 2,
   "projects": {
+    "api-functions": {
+      "root": "apps/api-functions",
+      "projectType": "application",
+      "sourceRoot": "apps/api-functions",
+      "targets": {
+        "build": {
+          "executor": "@nx-dotnet/core:build",
+          "outputs": ["{options.output}"],
+          "options": {
+            "output": "dist/apps/api-functions",
+            "configuration": "Debug"
+          },
+          "configurations": {
+            "production": {
+              "configuration": "Release"
+            }
+          }
+        },
+        "serve": {
+          "executor": "@nx-dotnet/core:serve",
+          "options": {
+            "configuration": "Debug"
+          },
+          "configurations": {
+            "production": {
+              "configuration": "Release"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nx-dotnet/core:format"
+        }
+      }
+    },
+    "api-functions-test": {
+      "root": "apps/api-functions-test",
+      "projectType": "application",
+      "sourceRoot": "apps/api-functions-test",
+      "targets": {
+        "build": {
+          "executor": "@nx-dotnet/core:build",
+          "outputs": ["{options.output}"],
+          "options": {
+            "output": "dist/apps/api-functions-test",
+            "configuration": "Debug"
+          },
+          "configurations": {
+            "production": {
+              "configuration": "Release"
+            }
+          }
+        },
+        "test": {
+          "executor": "@nx-dotnet/core:test",
+          "options": {}
+        },
+        "lint": {
+          "executor": "@nx-dotnet/core:format"
+        }
+      }
+    },
     "client": {
       "projectType": "application",
       "root": "apps/client",

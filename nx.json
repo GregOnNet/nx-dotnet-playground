@@ -27,6 +27,12 @@
     ]
   },
   "projects": {
+    "api-functions": {
+      "tags": ["nx-dotnet"]
+    },
+    "api-functions-test": {
+      "tags": ["nx-dotnet"]
+    },
     "client": {
       "tags": []
     },
@@ -34,5 +40,6 @@
       "tags": [],
       "implicitDependencies": ["client"]
     }
-  }
+  },
+  "plugins": ["@nx-dotnet/core"]
 }
