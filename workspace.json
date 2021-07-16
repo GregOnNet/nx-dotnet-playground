@@ -177,6 +177,29 @@
           }
         }
       }
+    },
+    "my-lib": {
+      "root": "libs/my-lib",
+      "projectType": "library",
+      "sourceRoot": "libs/my-lib",
+      "targets": {
+        "build": {
+          "executor": "@nx-dotnet/core:build",
+          "outputs": ["{options.output}"],
+          "options": {
+            "output": "dist/libs/my-lib",
+            "configuration": "Debug"
+          },
+          "configurations": {
+            "production": {
+              "configuration": "Release"
+            }
+          }
+        },
+        "lint": {
+          "executor": "@nx-dotnet/core:format"
+        }
+      }
     }
   },
   "cli": {
