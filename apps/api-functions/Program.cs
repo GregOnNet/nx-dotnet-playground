@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using NxDotnet.MyLib;
 
 namespace NxDotnet.ApiFunctions
 {
@@ -14,6 +15,10 @@ namespace NxDotnet.ApiFunctions
         public static void Main(string[] args)
         {
             CreateHostBuilder(args).Build().Run();
+
+            // Proof that lib can be linked
+            var myLibEntryPoint = new MyLibEntryPoint();
+            myLibEntryPoint.Greet();
         }
 
         public static IHostBuilder CreateHostBuilder(string[] args) =>

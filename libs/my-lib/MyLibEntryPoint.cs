@@ -2,7 +2,8 @@
 
 namespace NxDotnet.MyLib
 {
-    public class Class1
+    public class MyLibEntryPoint
     {
+      public void Greet() {}
     }
 }
